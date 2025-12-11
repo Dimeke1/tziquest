@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ақпараттық қауіпсіздік (TZI) тесті</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top-bar">
+      <div>
+        <p class="eyebrow">Ақпараттық қауіпсіздік (TZI)</p>
+        <h1>Тестке дайындық</h1>
+        <p class="sub">Киберқауіпсіздік бойынша емтиханға тыныш әрі жинақы дайындалу.</p>
+      </div>
+      <button type="button" id="theme-toggle" class="icon-button" aria-label="Түсті ауыстыру">
+        <span class="icon">🌙</span>
+        <span class="label">Қараңғы режим</span>
+      </button>
+    </header>
+
+    <main class="layout">
+      <section class="card" id="quiz-card">
+        <div class="progress-row">
+          <div class="pill" id="progress-label">0/0 сұрақ</div>
+          <div class="pill soft" id="score-pill">Ұпай: 0</div>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div id="status" class="info info-muted">Сұрақтар жүктелуде...</div>
+
+        <div id="question-block" class="question-block hidden">
+          <div class="question-text" id="question-text"></div>
+
+          <form id="options-form" class="options" aria-live="polite">
+            <!-- Радио батырмалар осында салынады -->
+          </form>
+
+          <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+          <div id="explanation" class="explanation hidden"></div>
+
+          <div class="actions">
+            <button type="button" id="submit-btn" class="btn primary">Жауап беру</button>
+            <button type="button" id="next-btn" class="btn ghost" disabled>Келесі сұрақ</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="summary-card" hidden>
+        <div class="summary-header">
+          <div>
+            <p class="eyebrow">Нәтиже</p>
+            <h2 id="summary-title">Тест аяқталды</h2>
+          </div>
+          <div class="pill" id="summary-score">0/0</div>
+        </div>
+        <p id="summary-detail" class="sub"></p>
+        <div class="summary-grid">
+          <div class="stat">
+            <p class="stat-label">Дұрыс жауаптар</p>
+            <p class="stat-value" id="stat-correct">0</p>
+          </div>
+          <div class="stat">
+            <p class="stat-label">Қате жауаптар</p>
+            <p class="stat-value" id="stat-wrong">0</p>
+          </div>
+          <div class="stat">
+            <p class="stat-label">Дәлдік</p>
+            <p class="stat-value" id="stat-accuracy">0%</p>
+          </div>
+        </div>
+        <button type="button" class="btn primary full" id="restart-btn">Қайта бастау</button>
+      </section>
+
+      <section class="card info-card">
+        <h2>Қалай пайдалану</h2>
+        <ul class="guide">
+          <li>Төрт нұсқаның бірін таңдаңыз (A, B, C немесе D) — артық опциялар жоқ.</li>
+          <li>Әр жауаптан кейін дұрыс/қате белгіленеді, түсіндірме болса көрсетіледі.</li>
+          <li>Прогресс жолағы мен санағыш арқылы жалпы жағдайды бақылаңыз.</li>
+          <li>Қараңғы/жарық режимін ауыстырып, өзіңізге ыңғайлы көріністі таңдаңыз.</li>
+          <li>Интерфейс мобильді және қолжетімділік ережелеріне сай бейімделеді.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
