@@ -324,4 +324,6 @@ function splitCsvLine(line) {
   }
   out.push(current);
   return out;
+
 }
+
